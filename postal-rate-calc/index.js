@@ -45,7 +45,7 @@ function computeTotal(response, option, weight) {
     } else if (weight <= 3.5) {
       cost = '1.13';
     } else {
-      cost = 'Your letter weighs too much';
+      cost = '?';
     }
   } else if (option == "Letters (Metered)") {
     if (weight <= 1) {
@@ -57,7 +57,7 @@ function computeTotal(response, option, weight) {
     } else if (weight <= 3.5) {
       cost = '1.10';
     } else {
-      cost = 'Your letter weighs too much';
+      cost = '?';
     }
   } else if (option == "Large Envelopes (Flats)") {
     if (weight <= 1) {
@@ -87,7 +87,7 @@ function computeTotal(response, option, weight) {
     } else if (weight <= 13) {
       cost = '3.52';
     } else {
-      cost = 'Your envelope weighs too much';
+      cost = '?';
     }
   } else if (option == "First-Class Package Service-Retail") {
     if (weight <= 1) {
@@ -117,12 +117,12 @@ function computeTotal(response, option, weight) {
     } else if (weight <= 13) {
       cost = '5.50';
     } else {
-      cost = 'Your package weighs too much';
+      cost = '?';
     }
   } else {
     // It would be best here to redirect to an "unknown operation"
     // error page or something similar.
-    cost = 'Error';
+    cost = '?';
   }
 
   cost = '$' + cost;
