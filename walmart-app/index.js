@@ -3,7 +3,7 @@ var app = express();
 var path = require('path');
 
 
-app.set("port", process.env.PORT)
+app.set("port", process.env.PORT || 5000)
 
     .use(express.json())
     .use(express.urlencoded({
